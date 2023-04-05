@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Completions and Functions
-fpath=(~/.zsh/completions ~/.zsh/scripts ${ASDF_DIR}/completions ~/.zsh/zsh-completions/src /usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completions ~/.zsh/scripts ~/.zsh-completions/src /usr/local/share/zsh-completions $fpath)
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**' 'l:|=* r:|=*'
 zstyle :compinstall filename '/Users/yulian/.zshrc'
@@ -65,7 +65,7 @@ source ~/.zsh/apps/gcloud.zsh
 
 # Theme
 source ~/.p10k.zsh
-source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # Quick bin
 export PATH=~/.bin:$PATH

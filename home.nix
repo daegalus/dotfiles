@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "yulian";
@@ -92,6 +93,7 @@
     julia
     micro
     winetricks
+    rustup
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -107,10 +109,21 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
-    ".gitconfig".source = dotfiles/gitconfig;
     ".zshrc".source = dotfiles/zshrc;
     ".zsh".source = dotfiles/zsh;
     ".p10k.zsh".source = dotfiles/zsh/p10k.zsh;
+    ".powerlevel10k".source = pkgs.fetchFromGitHub {
+        owner = "romkatv";
+        repo = "powerlevel10k";
+        rev = "v1.17.0";
+        hash = "sha256-fgrwbWj6CcPoZ6GbCZ47HRUg8ZSJWOsa7aipEqYuE0Q=";
+      };
+    ".zsh-completions".source = pkgs.fetchFromGitHub {
+        owner = "zsh-users";
+        repo = "zsh-completions";
+        rev = "0.34.0";
+        hash = "sha256-qSobM4PRXjfsvoXY6ENqJGI9NEAaFFzlij6MPeTfT0o=";
+    };
   };
 
   # You can also manage environment variables but you will have to manually
