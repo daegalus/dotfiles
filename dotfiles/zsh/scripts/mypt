@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+### Youtube MPV
+
+mpyt () {
+  local yturl=$1
+  local fmt=$2
+  if [[ $fmt == "" ]]; {
+    fmt="22"
+  }
+  mpv --vo=opengl,tct -ontop -no-border -geometry 720x405+1840+1035 -idle -cookies -cookies-file /tmp/cookies.txt $(youtube-dl -g --cookies /tmp/cookies.txt -f $fmt "$yturl")
+}

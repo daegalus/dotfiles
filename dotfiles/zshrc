@@ -1,0 +1,71 @@
+#!/usr/bin/env zsh
+# Completions and Functions
+fpath=(~/.zsh/completions ~/.zsh/scripts ${ASDF_DIR}/completions ~/.zsh/zsh-completions/src /usr/local/share/zsh-completions $fpath)
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=** r:|=**' 'l:|=* r:|=*'
+zstyle :compinstall filename '/Users/yulian/.zshrc'
+
+autoload -Uz compinit promptinit zkbd $fpath[2]/*(.:t)
+compinit
+promptinit
+autoload -U +X bashcompinit && bashcompinit
+
+# History and Options
+HISTFILE=~/.zhist
+HISTSIZE=20000
+SAVEHIST=10000
+setopt appendhistory autocd extendedglob incappendhistory histexpiredupsfirst histnostore histreduceblanks
+setopt notify completealiases prompt_subst nullglob rematchpcre
+bindkey -e
+export MICRO_TRUECOLOR=true
+export EDITOR="micro"
+umask 022
+
+# Terminal Colors and PS1
+export TERM=xterm-256color
+export PS1="$(print '%F{214}[%F{81}%m%F{14}|%F{214}%~%F{214}]%F{39} \n>>%{$reset_color%} ')"
+export CLICOLOR=1
+export LSOPTIONS="--color=always"
+export LC_ALL="en_US.UTF-8"
+
+# Keybinds
+source ~/.zsh/keybinds.zsh
+
+# Languages
+source ~/.zsh/languages/go.zsh
+source ~/.zsh/languages/nodejs.zsh # includes NPM, NVM, and Yarn
+source ~/.zsh/languages/python.zsh
+source ~/.zsh/languages/rust.zsh
+source ~/.zsh/languages/dart.zsh
+source ~/.zsh/languages/ocaml.zsh
+
+# Aliases
+source ~/.zsh/aliases/docker.zsh
+source ~/.zsh/aliases/exa.zsh
+source ~/.zsh/aliases/files.zsh
+source ~/.zsh/aliases/git.zsh
+source ~/.zsh/aliases/kubernetes.zsh
+source ~/.zsh/aliases/linux.zsh
+source ~/.zsh/aliases/macos.zsh
+source ~/.zsh/aliases/noglob.zsh
+source ~/.zsh/aliases/other.zsh
+source ~/.zsh/aliases/windows.zsh
+
+# App Settings
+source ~/.zsh/apps/easy_colors.zsh
+source ~/.zsh/apps/fzf.zsh
+source ~/.zsh/apps/zicd.zsh
+source ~/.zsh/apps/asdf.zsh
+source ~/.zsh/apps/nix.zsh
+source ~/.zsh/apps/eget.zsh
+source ~/.zsh/apps/flyio.zsh
+source ~/.zsh/apps/other.zsh
+source ~/.zsh/apps/wasmer.zsh
+source ~/.zsh/apps/gcloud.zsh
+
+# Theme
+source ~/.p10k.zsh
+source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+
+# Quick bin
+export PATH=~/.bin:$PATH

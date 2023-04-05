@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+### GCP SSH shorthand
+gcpscp() {
+  gcloud beta compute scp --internal-ip --project "$1" --zone "$2"  $6@"$3":$4 $5  
+}
+
+gcpscpu() {
+  gcloud beta compute scp --internal-ip --project "$1" --zone "$2" $5 $6@"$3":$4
+}
+ 

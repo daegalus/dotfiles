@@ -1,0 +1,7 @@
+[submodule "dotfiles/zsh/themes/powerlevel10k"]
+	branch = v1.17.0
+	path = dotfiles/zsh/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "dotfiles/zsh-completions"]
+	path = dotfiles/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions

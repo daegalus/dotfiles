@@ -1,0 +1,30 @@
+[user]
+	email = yulian@kuncheff.com
+	name = Yulian Kuncheff
+
+[core]
+	pager = delta
+	excludesFile = ~/.gitignore
+
+[delta]
+	features = side-by-side line-numbers decorations
+	whitespace-error-style = 22 reverse
+	side-by-side = true
+	plus-style = "syntax #012800"
+	minus-style = "syntax #340001"
+	syntax-theme = gruvbox-dark
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+[init]
+	defaultBranch = main
+	required = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[push]
+	autoSetupRemote = true

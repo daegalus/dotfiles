@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+### DNS Toys
+# easy function to use dns.toys more easily
+#
+
+dy() {
+  drill -Q "$1" @dns.toys; 
+}

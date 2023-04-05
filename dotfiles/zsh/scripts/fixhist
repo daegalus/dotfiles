@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+### fix history
+
+fixhist() {
+  mv ~/.zhist ~/.zhist_bad
+  strings .zhist_bad > .zhist
+  fc -R ~/.zhist
+  rm ~/.zhist_bad
+}

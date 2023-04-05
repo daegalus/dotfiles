@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+### JQ Json Live Viewer
+# Uses fzf to create a live view of your JSON using JQ and JQ filtering
+#
+
+jqv() {
+  echo '' | fzf --print-query --preview "cat $1 | jq -C {q}"
+}
