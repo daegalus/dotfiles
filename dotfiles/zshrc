@@ -31,14 +31,6 @@ export LC_ALL="en_US.UTF-8"
 # Keybinds
 source ~/.zsh/keybinds.zsh
 
-# Languages
-source ~/.zsh/languages/go.zsh
-source ~/.zsh/languages/nodejs.zsh # includes NPM, NVM, and Yarn
-source ~/.zsh/languages/python.zsh
-source ~/.zsh/languages/rust.zsh
-source ~/.zsh/languages/dart.zsh
-source ~/.zsh/languages/ocaml.zsh
-
 # Aliases
 source ~/.zsh/aliases/docker.zsh
 source ~/.zsh/aliases/exa.zsh
@@ -55,17 +47,13 @@ source ~/.zsh/aliases/windows.zsh
 source ~/.zsh/apps/easy_colors.zsh
 source ~/.zsh/apps/fzf.zsh
 source ~/.zsh/apps/zicd.zsh
-source ~/.zsh/apps/asdf.zsh
-source ~/.zsh/apps/nix.zsh
-source ~/.zsh/apps/eget.zsh
-source ~/.zsh/apps/flyio.zsh
-source ~/.zsh/apps/other.zsh
 source ~/.zsh/apps/wasmer.zsh
-source ~/.zsh/apps/gcloud.zsh
 
 # Theme
 source ~/.p10k.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
-# Quick bin
-export PATH=~/.bin:$PATH
+# Nix Vars
+source ~/.nix-profile/etc/profile.d/nix.sh
+source ~/.nix-profile/etc/profile.d/nix-daemon.sh
+source ~/.nix-profile/etc/profile.d/hm-session-vars.sh

@@ -137,7 +137,46 @@
   #
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    USING_NIX="true";
+    TERM = "xterm-256color";
+    MICRO_TRUECOLOR = "true";
+    EDITOR = "micro";
+    CLICOLORS = "1";
+    LSOPTIONS = "--color=always";
+    LC_ALL = "en_US.UTF-8";
+
+    # eget
+    EGET_BIN="~/.bin";
+
+    # fly.io
+    FLYCTL_INSTALL="/home/yulian/.fly";
+
+    # fzf
+    FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git";
+    FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND";
+
+    # gcloud
+    USE_GKE_GCLOUD_AUTH_PLUGIN="true";
+
+    # golang
+    WORKSPACE_ROOT="${config.home.homeDirectory}/workspace/code";
+    GOPROXY="https://proxy.golang.org,direct";
+
+    # python
+    # wasmer
+    WASMER_DIR="/home/yulian/.wasmer";
+
+    # other
+    GLAMOUR_STYLE="dark";
+
+    PATH="$FLYCTL_INSTALL/bin:" +
+        "${config.home.homeDirectory}/.bin:" +
+        "${config.home.homeDirectory}/.cargo/bin:" +
+        "${config.home.homeDirectory}/.local/bin:" +
+        "${config.home.homeDirectory}/.go/bin:" +
+        "${config.home.homeDirectory}/.poetry/bin:" +
+        "${config.home.homeDirectory}/.pyenv/bin:" +
+        ":$PATH";
   };
 
   # Let Home Manager install and manage itself.

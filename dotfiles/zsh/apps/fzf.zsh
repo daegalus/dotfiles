@@ -1,8 +1,5 @@
 #!/usr/bin/env zsh
 ### Fuzzy Find
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
