@@ -44,6 +44,7 @@ source ~/.zsh/aliases/other.zsh
 source ~/.zsh/aliases/windows.zsh
 
 # App Settings
+source ~/.zsh/apps/copilot-cli.zsh
 source ~/.zsh/apps/easy_colors.zsh
 source ~/.zsh/apps/fzf.zsh
 source ~/.zsh/apps/zicd.zsh
