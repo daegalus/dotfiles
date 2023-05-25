@@ -18,13 +18,13 @@
     homeConfigurations."yulian@thready" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${arch};
-        modules = [ ./home.nix ];
+        modules = [ ./shared.nix ./home.nix ./pkgs/base.nix ./pkgs/dev.nix ];
       };
 
     homeConfigurations."yulian@lx1e" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${arch};
-        modules = [ ./work.nix ];
+        modules = [ ./shared.nix ./work.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/k8s.nix ];
       };
     };
 }
