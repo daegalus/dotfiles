@@ -28,6 +28,11 @@ export CLICOLOR=1
 export LSOPTIONS="--color=always"
 export LC_ALL="en_US.UTF-8"
 
+# Nix Vars
+source ~/.nix-profile/etc/profile.d/nix.sh
+source ~/.nix-profile/etc/profile.d/nix-daemon.sh
+source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+
 # Keybinds
 source ~/.zsh/keybinds.zsh
 
@@ -53,8 +58,3 @@ source ~/.zsh/apps/wasmer.zsh
 # Theme
 source ~/.p10k.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
-
-# Nix Vars
-source ~/.nix-profile/etc/profile.d/nix.sh
-source ~/.nix-profile/etc/profile.d/nix-daemon.sh
-source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
