@@ -128,6 +128,7 @@
         "${config.home.homeDirectory}/.go/bin:" +
         "${config.home.homeDirectory}/.poetry/bin:" +
         "${config.home.homeDirectory}/.pyenv/bin:" +
+        "${config.home.homeDirectory}/.npm-packages/bin:" +
         ":$PATH";
   };
 
