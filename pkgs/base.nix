@@ -17,5 +17,6 @@
     rclone
     ripgrep
     tmux
+    wireguard-tools
   ];
 }
