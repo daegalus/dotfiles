@@ -16,5 +16,6 @@
     micro
     rclone
     ripgrep
+    tmux
   ];
 }
