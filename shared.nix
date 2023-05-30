@@ -70,6 +70,7 @@
     ".zshrc".source = dotfiles/zshrc;
     ".zsh".source = dotfiles/zsh;
     ".p10k.zsh".source = dotfiles/zsh/p10k.zsh;
+    ".npmrc".source = dotfiles/npmrc;
     ".powerlevel10k".source = pkgs.fetchFromGitHub {
         owner = "romkatv";
         repo = "powerlevel10k";
@@ -116,6 +117,9 @@
 
     # other
     GLAMOUR_STYLE="dark";
+
+    # fly.io
+    FLYCTL_INSTALL="${config.home.homeDirectory}/.fly";
 
     PATH="$FLYCTL_INSTALL/bin:" +
         "${config.home.homeDirectory}/.bin:" +
