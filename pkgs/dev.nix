@@ -22,5 +22,12 @@
     terraform
     tflint
     tealdeer
+
+    # Wails
+    gcc
+    gtk3
+    webkitgtk
+    nsis
+    upx
   ];
 }
