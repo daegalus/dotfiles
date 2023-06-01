@@ -58,3 +58,5 @@ source ~/.zsh/apps/wasmer.zsh
 # Theme
 source ~/.p10k.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
+source ~/.zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh

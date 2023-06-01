@@ -22,6 +22,7 @@
     terraform
     tflint
     tealdeer
+    pkg-config
 
     # Wails
     gcc
