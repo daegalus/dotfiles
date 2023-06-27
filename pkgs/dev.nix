@@ -10,6 +10,7 @@
     julia
     nim
     rustup
+    deno
 
     # Containers
     docker
