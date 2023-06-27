@@ -9,7 +9,6 @@
     haxe
     julia
     nim
-    nodejs
     rustup
 
     # Containers

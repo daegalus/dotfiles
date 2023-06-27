@@ -70,7 +70,7 @@
     ".zshrc".source = dotfiles/zshrc;
     ".zsh".source = dotfiles/zsh;
     ".p10k.zsh".source = dotfiles/zsh/p10k.zsh;
-    ".npmrc".source = dotfiles/npmrc;
+    #".npmrc".source = dotfiles/npmrc;
     ".powerlevel10k".source = pkgs.fetchFromGitHub {
         owner = "romkatv";
         repo = "powerlevel10k";
@@ -114,6 +114,7 @@
     # golang
     WORKSPACE_ROOT="${config.home.homeDirectory}/workspace/code";
     GOPROXY="https://proxy.golang.org,direct";
+    GOPATH="${config.home.homeDirectory}/.go";
 
     # other
     GLAMOUR_STYLE="dark";
@@ -126,7 +127,6 @@
         "${config.home.homeDirectory}/.cargo/bin:" +
         "${config.home.homeDirectory}/.local/bin:" +
         "${config.home.homeDirectory}/.go/bin:" +
-        "${config.home.homeDirectory}/go/bin:" +
         "${config.home.homeDirectory}/.poetry/bin:" +
         "${config.home.homeDirectory}/.pyenv/bin:" +
         "${config.home.homeDirectory}/.npm-packages/bin:" +
