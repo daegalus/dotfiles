@@ -6,6 +6,16 @@
   home.username = "yulian";
   home.stateVersion = "22.11";
 
+  # foot
+  programs.foot = {
+    enable = true;
+    settings = {
+      main = {
+        font = "CaskaydiaCove Nerd Font:size=8";
+      };
+    };
+  };
+
   # Set git config 
   programs.git = {
     enable = true;
@@ -135,4 +145,5 @@
 
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
+  fonts.fontconfig.enable = true;
 }

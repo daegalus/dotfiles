@@ -15,7 +15,7 @@
     defaultPackage.${arch} =
       home-manager.defaultPackage.${arch};
 
-    homeConfigurations."yulian@thready" =
+    homeConfigurations."yulian@seashanty" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${arch};
         modules = [ ./shared.nix ./home.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/home.nix];
