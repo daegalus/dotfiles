@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  home.homeDirectory = "/var/home/yulian";
+  home.homeDirectory = "/home/yulian";
 }
