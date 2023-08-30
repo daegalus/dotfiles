@@ -8,5 +8,8 @@
     webkitgtk
     nsis
     upx
+
+    # Static Site
+    hugo
   ];
 }

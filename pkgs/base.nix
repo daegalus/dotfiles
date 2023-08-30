@@ -13,10 +13,13 @@
     fd
     fzf
     gh
+    jq
     micro
+    pandoc
     rclone
     ripgrep
     tmux
     wireguard-tools
+    xh
   ];
 }
