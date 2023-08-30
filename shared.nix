@@ -134,6 +134,7 @@
 
     PATH="$FLYCTL_INSTALL/bin:" +
         "${config.home.homeDirectory}/.bin:" +
+        "${config.home.homeDirectory}/.bin/vale:" +
         "${config.home.homeDirectory}/.cargo/bin:" +
         "${config.home.homeDirectory}/.local/bin:" +
         "${config.home.homeDirectory}/.go/bin:" +

@@ -23,6 +23,7 @@
     tflint
     tealdeer
     pkg-config
+    mage
 
     # Wails
     gcc
