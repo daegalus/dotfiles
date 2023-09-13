@@ -11,6 +11,8 @@
     nim
     rustup
     deno
+    zig
+    zls
 
     # Containers
     docker
