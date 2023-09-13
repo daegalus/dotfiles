@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-### Man Find
-fman() {
-    man -k . | fzf --prompt='Man> ' | awk '{print $1}' | xargs -r man
-}

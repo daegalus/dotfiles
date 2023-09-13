@@ -1,4 +1,0 @@
-#!/bin/env zsh
-## Search packages and install
-
-sudo dnf install $(dnf list | fzf | cut --delimiter=" " --fields=1) 

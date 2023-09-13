@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-### Finds a file then opens it in code
-vsfd() {
-    vsfile=$(fzf --exit-0) && code $vsfile
-}

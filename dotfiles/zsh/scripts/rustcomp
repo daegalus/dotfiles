@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-### Update Rust completions
-
-rustcomp() {
-  rustup completions zsh > ~/.zsh/completions/_rustup
-  rustup completions zsh cargo > ~/.zsh/completions/_cargo
-}
