@@ -8,10 +8,13 @@
 
 
   programs.home-manager.enable = true;
-  programs.exa = {
+  programs.eza = {
     enable = true;
     enableAliases = true;
+    git = true;
     extraOptions = [
+      "-ZF"
+      "--git"
       "-s=name"
       "--group-directories-first"
     ];
@@ -20,6 +23,11 @@
   programs.atuin = {
     enable = true;
     enableZshIntegration = true;
+    settings = {
+      style = "compact";
+      inline_height = 10;
+      show_preview = true;
+    };
   };
 
   programs.starship = {
@@ -27,9 +35,10 @@
     enableZshIntegration = true;
     settings = {
       add_newline = false;
-      format = "$os $directory$fill$all";
+      format = "$os $directory$fill$time$all";
       directory.fish_style_pwd_dir_length = 3;
       hostname.format = "[$ssh_symbol$hostname]($style) ";
+      time.disabled = false;
       os = {
       	disabled = false;
       	symbols = {
@@ -84,6 +93,7 @@
       elixir.symbol = " ";
       elm.symbol = " ";
       fossil_branch.symbol = " ";
+      gcloud.symbol = "󱇶 ";
       git_branch.symbol = " ";
       golang.symbol = " ";
       guix_shell.symbol = " ";

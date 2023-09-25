@@ -11,7 +11,7 @@
     bat
     delta
     duf
-    exa
+    eza
     fd
     fzf
     gh
