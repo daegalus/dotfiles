@@ -122,6 +122,8 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+    enableVteIntegration = true;
+    autocd = true;
     dirHashes = {
       docs = "$HOME/Documents";
       workspace = "$HOME/workspace";
@@ -138,7 +140,10 @@
         { name = "johannchangpro/zsh-interactive-cd"; }
       ];
     };
-    initExtra = "source ~/.zsh/apps/easy_colors.zsh" + "\n" +
+    initExtra = "source ~/.nix-profile/etc/profile.d/nix.sh" + "\n" +
+      "source ~/.nix-profile/etc/profile.d/nix-daemon.sh" + "\n" +
+      "source ~/.nix-profile/etc/profile.d/hm-session-vars.sh" + "\n" +
+      "source ~/.zsh/apps/easy_colors.zsh" + "\n" +
       "source ~/.zsh/apps/fzf.zsh" + "\n" +
       "source ~/.zsh/apps/nodejs.zsh" + "\n" +
       "source ~/.zsh/apps/copilot-cli.zsh" + "\n" +
