@@ -7,6 +7,7 @@
     dart
     go
     haxe
+    hashlink # VM for Haxe
     julia
     nim
     rustup

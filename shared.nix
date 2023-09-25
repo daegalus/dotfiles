@@ -247,7 +247,6 @@
 
   programs.go = {
     enable = true;
-    goPath = "${config.home.homeDirectory}/.go";
   };
 
   home.file = {
@@ -268,6 +267,7 @@
     # golang
     WORKSPACE_ROOT="${config.home.homeDirectory}/workspace/code";
     GOPROXY="https://proxy.golang.org,direct";
+    GOPATH="${config.home.homeDirectory}/.go";
 
     # other
     GLAMOUR_STYLE="dark";
