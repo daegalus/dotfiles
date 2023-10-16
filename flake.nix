@@ -26,5 +26,11 @@
         pkgs = nixpkgs.legacyPackages.${arch};
         modules = [ ./shared.nix ./work.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/k8s.nix ./pkgs/work.nix];
       };
+
+    homeConfigurations."yulian@oceanhymn" =
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${arch};
+        modules = [ ./shared.nix ./laptop.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/laptop.nix];
+      };
     };
 }
