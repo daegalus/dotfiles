@@ -18,6 +18,7 @@
     # Containers
     docker
     podman
+    buildah
 
     # Tools
     golangci-lint
@@ -27,12 +28,9 @@
     tealdeer
     pkg-config
     mage
+    crystalline
+    devbox
 
-    # Wails
-    gcc
-    gtk3
-    webkitgtk
-    nsis
-    upx
+    # Libs
   ];
 }

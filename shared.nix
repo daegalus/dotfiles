@@ -284,6 +284,7 @@
         "${config.home.homeDirectory}/.bin:" +
         "${config.home.homeDirectory}/.bin/vale:" +
         "${config.home.homeDirectory}/.cargo/bin:" +
+        "${config.home.homeDirectory}/.local/share/ivm/bin" +
         "${config.home.homeDirectory}/.local/bin:" +
         "${config.home.homeDirectory}/.go/bin:" +
         "${config.home.homeDirectory}/.poetry/bin:" +

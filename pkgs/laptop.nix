@@ -6,5 +6,6 @@
 
     # Static Site
     hugo
+    pkg-config
   ];
 }
