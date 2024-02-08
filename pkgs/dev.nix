@@ -16,7 +16,6 @@
     zls
 
     # Containers
-    docker
     podman
     buildah
 

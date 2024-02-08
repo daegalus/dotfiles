@@ -10,8 +10,8 @@
 
   programs.zsh = {
     initExtra = "source ~/.nix-profile/etc/profile.d/nix.sh" + "\n" +
-      "source ~/.nix-profile/etc/profile.d/nix-daemon.sh"
-  }
+      "source ~/.nix-profile/etc/profile.d/nix-daemon.sh";
+  };
 
   home.sessionVariables = {
     # gcloud
