@@ -5,7 +5,7 @@
     # Languages
     crystal
     dart
-    go
+    go_1_22
     haxe
     hashlink # VM for Haxe
     julia
