@@ -29,6 +29,7 @@
     mage
     crystalline
     devbox
+    ldns
 
     # Libs
   ];
