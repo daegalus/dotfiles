@@ -153,6 +153,8 @@
       "  source $file" + "\n" +
       "done";
     shellAliases = {
+      # VS Code Wayland
+      code = "code --enable-features=UseOzonePlatform,WaylandWindowDecorations,WebRTCPipeWireCapturer --ozone-platform=wayland";
       # Docker
       dpsc = "docker rm \$(docker ps -a -q)";
       dimgc = "docker rmi \$(docker images | grep \"^<none>\" | awk '{print $3}')";
@@ -248,10 +250,6 @@
     enableZshIntegration = true;
     defaultCommand = "fd --type f --hidden --follow --exclude .git";
     fileWidgetCommand = "fd --type f --hidden --follow --exclude .git";
-  };
-
-  programs.go = {
-    enable = true;
   };
 
   home.file = {
