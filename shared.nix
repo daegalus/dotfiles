@@ -140,8 +140,7 @@
         { name = "johannchangpro/zsh-interactive-cd"; }
       ];
     };
-    initExtra = "source ~/.nix-profile/etc/profile.d/nix.sh" + "\n" +
-      "source ~/.nix-profile/etc/profile.d/nix-daemon.sh" + "\n" +
+    initExtra = 
       "source ~/.nix-profile/etc/profile.d/hm-session-vars.sh" + "\n" +
       "source ~/.zsh/apps/easy_colors.zsh" + "\n" +
       "source ~/.zsh/apps/fzf.zsh" + "\n" +

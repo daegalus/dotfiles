@@ -8,7 +8,6 @@
     go_1_22
     haxe
     hashlink # VM for Haxe
-    julia
     nim
     rustup
     deno
@@ -17,6 +16,7 @@
 
     # Containers
     podman
+    podman-compose
     buildah
 
     # Tools
@@ -32,5 +32,7 @@
     ldns
 
     # Libs
+    gcc
+    devbox
   ];
 }
