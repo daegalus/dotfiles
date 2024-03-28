@@ -30,6 +30,7 @@
     crystalline
     devbox
     ldns
+    flatpak-builder
 
     # Libs
     gcc
