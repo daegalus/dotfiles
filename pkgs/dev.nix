@@ -5,7 +5,7 @@
     # Languages
     crystal
     dart
-    go_1_22
+    go
     haxe
     hashlink # VM for Haxe
     nim

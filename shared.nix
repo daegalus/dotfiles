@@ -10,7 +10,6 @@
   programs.home-manager.enable = true;
   programs.eza = {
     enable = true;
-    enableAliases = true;
     git = true;
     extraOptions = [
       "-ZF"
@@ -250,6 +249,10 @@
     defaultCommand = "fd --type f --hidden --follow --exclude .git";
     fileWidgetCommand = "fd --type f --hidden --follow --exclude .git";
   };
+
+  # programs.go = {
+  #   enable = true;
+  # };
 
   home.file = {
     #".zshrc".source = dotfiles/zshrc;
