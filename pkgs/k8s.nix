@@ -10,5 +10,6 @@
     kubectl
     kubectx
     skaffold
+    kompose
   ];
 }

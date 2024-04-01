@@ -9,6 +9,7 @@
     atuin
     age
     bat
+    bottom
     delta
     duf
     eza

@@ -30,7 +30,7 @@
     homeConfigurations."yulian@oceanhymn" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${arch};
-        modules = [ ./shared.nix ./laptop.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/laptop.nix];
+        modules = [ ./shared.nix ./laptop.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/laptop.nix ./pkgs/k8s.nix];
       };
     };
 }
