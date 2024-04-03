@@ -29,6 +29,7 @@
     flatpak-builder
     hugo
     squashfsTools
+    git-filter-repo
 
     # Libs
     gcc
