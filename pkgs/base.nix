@@ -23,6 +23,7 @@
     ripgrep
     starship
     tmux
+    topgrade
     wireguard-tools
     xh
   ];

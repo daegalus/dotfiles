@@ -6,8 +6,6 @@
     crystal
     dart
     go
-    haxe
-    hashlink # VM for Haxe
     nim
     rustup
     deno
@@ -22,8 +20,6 @@
     # Tools
     golangci-lint
     protobuf
-    terraform
-    tflint
     tealdeer
     pkg-config
     mage
@@ -31,6 +27,8 @@
     devbox
     ldns
     flatpak-builder
+    hugo
+    squashfsTools
 
     # Libs
     gcc

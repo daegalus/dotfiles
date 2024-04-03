@@ -11,6 +11,7 @@
 
   outputs = { nixpkgs, home-manager, ... }: let
     arch = "x86_64-linux";
+    arm = "aarch64-linux";
   in {
     defaultPackage.${arch} =
       home-manager.defaultPackage.${arch};
@@ -30,7 +31,13 @@
     homeConfigurations."yulian@oceanhymn" =
       home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${arch};
-        modules = [ ./shared.nix ./laptop.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/laptop.nix ./pkgs/k8s.nix];
+        modules = [ ./shared.nix ./laptop.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/laptop.nix];
+      };
+
+    homeConfigurations."yulian@onyx-lake" = 
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${arm};
+        modules = [ ./shared.nix ./cloudbox.nix ./pkgs/base.nix ./pkgs/dev.nix ./pkgs/cloudbox.nix];
       };
     };
 }
