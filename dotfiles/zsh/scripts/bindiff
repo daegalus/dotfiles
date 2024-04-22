@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-### Binary Diff
-
-bindiff() {
-  vimdiff -y <(xxd $1) <(xxd $2) #| colordiff | less -R
-}

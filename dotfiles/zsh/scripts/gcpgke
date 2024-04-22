@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-### GCP GKE Creds shorthand
-gcpgke() {
-  gcloud container clusters get-credentials --project $1 --region $2 $3
-}
-
-

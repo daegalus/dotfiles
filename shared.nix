@@ -124,9 +124,10 @@
     enableVteIntegration = true;
     autocd = true;
     dirHashes = {
-      docs = "$HOME/Documents";
-      workspace = "$HOME/workspace";
-      dl = "$HOME/Downloads";
+      docs = "${config.home.homeDirectory}/Documents";
+      workspace = "${config.home.homeDirectory}/workspace";
+      dl = "${config.home.homeDirectory}/Downloads";
+      hm = "${config.home.homeDirectory}/.config/home-manager";
     };
     history = {
       extended = true;
@@ -137,19 +138,23 @@
       enable = true;
       plugins = [
         { name = "johannchangpro/zsh-interactive-cd"; }
+        { name = "reegnz/jq-zsh-plugin"; }
       ];
     };
     initExtra = 
-      "source ~/.nix-profile/etc/profile.d/hm-session-vars.sh" + "\n" +
-      "source ~/.zsh/apps/easy_colors.zsh" + "\n" +
-      "source ~/.zsh/apps/fzf.zsh" + "\n" +
-      "source ~/.zsh/apps/nodejs.zsh" + "\n" +
-      "source ~/.zsh/apps/copilot-cli.zsh" + "\n" +
-      "source ~/.zsh/apps/zicd.zsh" + "\n" +
-      "source ~/.zsh/apps/wasmer.zsh" + "\n" +
-      "for file in ~/.zsh/scripts/*; do" + "\n" +
-      "  source $file" + "\n" +
-      "done";
+      ''
+        source ${config.home.homeDirectory}/.nix-profile/etc/profile.d/hm-session-vars.sh"
+        source $NVM_DIR/nvm.sh
+        source $NVM_DIR/bash_completion
+        source $WASMER_DIR/wasmer.sh
+        
+        # Binary Diff - requires vim-full
+        bindiff() { vimdiff -y <(xxd $1) <(xxd $2); }
+        # DNS Toys - easy function to use dns.toys more easily
+        dy() { drill -Q "$1" @dns.toys; }
+        ### GCP GKE Creds shorthand
+        gcpgke() { gcloud container clusters get-credentials --project $1 --region $2 $3; }
+      '';
     shellAliases = {
       # VS Code Wayland
       code = "code --enable-features=UseOzonePlatform,WaylandWindowDecorations,WebRTCPipeWireCapturer --ozone-platform=wayland";
@@ -200,6 +205,11 @@
     enable = true;
     userName  = "Yulian Kuncheff";
     userEmail = lib.mkDefault "yulian@kuncheff.com";
+    ignores = [
+      ".vscode/"
+      "builddir/"
+      "build/"
+    ];
     extraConfig = {
       core = {
         pager = "delta";
@@ -248,20 +258,13 @@
     enableZshIntegration = true;
     defaultCommand = "fd --type f --hidden --follow --exclude .git";
     fileWidgetCommand = "fd --type f --hidden --follow --exclude .git";
+    changeDirWidgetCommand = "fd --type d --hidden --follow --exclude .git";
   };
 
-  # programs.go = {
-  #   enable = true;
-  # };
-
-  home.file = {
-    #".zshrc".source = dotfiles/zshrc;
-    ".zsh".source = dotfiles/zsh;
-    #".npmrc".source = dotfiles/npmrc;
-  };
+  home.file = {};
 
   home.sessionVariables = {
-    USING_NIX="true";
+    USING_NIX = "true";
     TERM = "xterm-256color";
     MICRO_TRUECOLOR = "true";
     EDITOR = "micro";
@@ -270,27 +273,31 @@
     LC_ALL = "en_US.UTF-8";
 
     # golang
-    WORKSPACE_ROOT="${config.home.homeDirectory}/workspace/code";
-    GOPROXY="https://proxy.golang.org,direct";
-    GOPATH="${config.home.homeDirectory}/.go";
+    WORKSPACE_ROOT = "${config.home.homeDirectory}/workspace/code";
+    GOPROXY = "https://proxy.golang.org,direct";
+    GOPATH = "${config.home.homeDirectory}/.go";
+
+    # nodejs
+    NVM_DIR = "${config.home.homeDirectory}/.nvm";
 
     # other
-    GLAMOUR_STYLE="dark";
+    GLAMOUR_STYLE = "dark";
 
     # fly.io
-    FLYCTL_INSTALL="${config.home.homeDirectory}/.fly";
+    FLYCTL_INSTALL = "${config.home.homeDirectory}/.fly";
 
-    PATH="$FLYCTL_INSTALL/bin:" +
-        "${config.home.homeDirectory}/.bin:" +
-        "${config.home.homeDirectory}/.bin/vale:" +
-        "${config.home.homeDirectory}/.cargo/bin:" +
-        "${config.home.homeDirectory}/.local/share/ivm/bin" +
-        "${config.home.homeDirectory}/.local/bin:" +
-        "${config.home.homeDirectory}/.go/bin:" +
-        "${config.home.homeDirectory}/.poetry/bin:" +
-        "${config.home.homeDirectory}/.pyenv/bin:" +
-        "${config.home.homeDirectory}/.npm-packages/bin:" +
-        ":$PATH";
+    PATH = lib.concatStrings [
+        "$FLYCTL_INSTALL/bin:"
+        "${config.home.homeDirectory}/.bin:"
+        "${config.home.homeDirectory}/.cargo/bin:"
+        "${config.home.homeDirectory}/.local/share/ivm/bin"
+        "${config.home.homeDirectory}/.local/bin:"
+        "${config.home.homeDirectory}/.go/bin:"
+        "${config.home.homeDirectory}/.poetry/bin:"
+        "${config.home.homeDirectory}/.pyenv/bin:"
+        "${config.home.homeDirectory}/.npm-packages/bin:"
+        "$PATH"
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;

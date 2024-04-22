@@ -30,6 +30,9 @@
     hugo
     squashfsTools
     git-filter-repo
+    gh
+    xxd
+    vim-full
 
     # Libs
     gcc

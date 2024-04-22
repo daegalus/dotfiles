@@ -22,6 +22,7 @@
     rclone
     ripgrep
     starship
+    terminal-colors
     tmux
     topgrade
     wireguard-tools
