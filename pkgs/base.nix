@@ -14,6 +14,7 @@
     duf
     eza
     fd
+    ffmpeg-full
     fzf
     gh
     jq
