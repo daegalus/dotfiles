@@ -43,6 +43,7 @@
       	symbols = {
       		Alpaquita = " ";
       		Alpine = " ";
+          AlmaLinux = " ";
       		Amazon = " ";
       		Android = " ";
       		Arch = " ";
@@ -58,6 +59,7 @@
       		Gentoo = " ";
       		HardenedBSD = "󰞌 ";
       		Illumos = "󰈸 ";
+          Kali = " ";
       		Linux = " ";
       		Mabox = " ";
       		Macos = " ";
@@ -75,22 +77,27 @@
       		Redhat = " ";
       		RedHatEnterprise = " ";
       		Redox = "󰀘 ";
+          RockyLinux = " ";
       		Solus = "󰠳 ";
       		SUSE = " ";
       		Ubuntu = " ";
       		Unknown = " ";
+          Void = " ";
       		Windows = "󰍲 ";
       	};
       };
-      aws.symbol = "  ";
+      aws.symbol = "  ";
+      azure.symbol = "󰠅 ";
       buf.symbol = " ";
       c.symbol = " ";
       conda.symbol = " ";
+      crystal.symbol = " ";
       dart.symbol = " ";
       directory.read_only = " 󰌾";
       docker_context.symbol = " ";
       elixir.symbol = " ";
       elm.symbol = " ";
+      fennel.symbol = " ";
       fossil_branch.symbol = " ";
       gcloud.symbol = "󱇶 ";
       git_branch.symbol = " ";
@@ -102,19 +109,25 @@
       hostname.ssh_symbol = " ";
       java.symbol = " ";
       julia.symbol = " ";
+      kotlin.symbol = " ";
       lua.symbol = " ";
       memory_usage.symbol = "󰍛 ";
       meson.symbol = "󰔷 ";
       nim.symbol = "󰆥 ";
       nix_shell.symbol = " ";
       nodejs.symbol = " ";
+      ocaml.symbol = " ";
       package.symbol = "󰏗 ";
+      perl.symbol = " ";
+      php.symbol = " ";
       pijul_channel.symbol = " ";
       python.symbol = " ";
       rlang.symbol = "󰟔 ";
       ruby.symbol = " ";
       rust.symbol = " ";
       scala.symbol = " ";
+      swift.symbol = " ";
+      zig.symbol = " ";
     };
   };
 
@@ -143,7 +156,8 @@
     };
     initExtra = 
       ''
-        source ${config.home.homeDirectory}/.nix-profile/etc/profile.d/hm-session-vars.sh"
+        source ${config.home.homeDirectory}/.nix-profile/etc/profile.d/hm-session-vars.sh
+        NVM_DIR="${config.home.homeDirectory}/.nvm"
         source $NVM_DIR/nvm.sh
         source $NVM_DIR/bash_completion
         source $WASMER_DIR/wasmer.sh
