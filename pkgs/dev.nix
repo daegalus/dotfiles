@@ -34,6 +34,8 @@
     xxd
     vim-full
     difftastic
+    poetry
+    wasmer
 
     # Libs
     gcc
