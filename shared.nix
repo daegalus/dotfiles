@@ -8,6 +8,7 @@
 
 
   programs.home-manager.enable = true;
+  
   programs.eza = {
     enable = true;
     git = true;
