@@ -224,9 +224,28 @@
       "builddir/"
       "build/"
     ];
+    delta = {
+      enable = false;
+      options = {
+        features = "side-by-side line-numbers decorations";
+        whitespace-error-style = "22 reverse";
+        side-by-side = true;
+        plus-style = "syntax #012800";
+        minus-style = "syntax #340001";
+        syntax-theme = "gruvbox-dark";
+        decorations = {
+          commit-decoration-style = "yellow box ul";
+          file-style = "yellow ul";
+          file-decoration-style = "yellow ul";
+        };
+      };
+    };
+    difftastic = {
+      enable = true;
+
+    };
     extraConfig = {
       core = {
-        pager = "delta";
         editor = "micro";
         excludesFile = "${config.home.homeDirectory}/.gitignore";
       };
@@ -243,21 +262,8 @@
       push = {
         autoSetupRemote = true;
       };
-      delta = {
-        features = "side-by-side line-numbers decorations";
-        whitespace-error-style = "22 reverse";
-        side-by-side = true;
-        plus-style = "syntax #012800";
-        minus-style = "syntax #340001";
-        syntax-theme = "gruvbox-dark";
-        decorations = {
-          commit-decoration-style = "yellow box ul";
-          file-style = "yellow ul";
-          file-decoration-style = "yellow ul";
-        };
-      };
       interactive = {
-        diffFilter = "delta --color-only";
+        diffFilter = "difft";
       };
       url = {
         "git@github.com:" = {
