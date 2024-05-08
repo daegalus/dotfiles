@@ -33,6 +33,7 @@
     gh
     xxd
     vim-full
+    difftastic
 
     # Libs
     gcc
