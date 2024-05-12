@@ -7,6 +7,7 @@
 
     # Packages
     atuin
+    avahi
     age
     bat
     bottom
