@@ -8,7 +8,7 @@
 
 
   programs.home-manager.enable = true;
-  
+
   programs.eza = {
     enable = true;
     git = true;
@@ -44,7 +44,7 @@
       	symbols = {
       		Alpaquita = " ";
       		Alpine = " ";
-          AlmaLinux = " ";
+            AlmaLinux = " ";
       		Amazon = " ";
       		Android = " ";
       		Arch = " ";
@@ -60,7 +60,7 @@
       		Gentoo = " ";
       		HardenedBSD = "󰞌 ";
       		Illumos = "󰈸 ";
-          Kali = " ";
+            Kali = " ";
       		Linux = " ";
       		Mabox = " ";
       		Macos = " ";
@@ -78,12 +78,12 @@
       		Redhat = " ";
       		RedHatEnterprise = " ";
       		Redox = "󰀘 ";
-          RockyLinux = " ";
+            RockyLinux = " ";
       		Solus = "󰠳 ";
       		SUSE = " ";
       		Ubuntu = " ";
       		Unknown = " ";
-          Void = " ";
+            Void = " ";
       		Windows = "󰍲 ";
       	};
       };
@@ -161,7 +161,6 @@
         NVM_DIR="${config.home.homeDirectory}/.nvm"
         source $NVM_DIR/nvm.sh
         source $NVM_DIR/bash_completion
-        source $WASMER_DIR/wasmer.sh
         
         # Binary Diff - requires vim-full
         bindiff() { vimdiff -y <(xxd $1) <(xxd $2); }
@@ -220,6 +219,7 @@
     enable = true;
     userName  = "Yulian Kuncheff";
     userEmail = lib.mkDefault "yulian@kuncheff.com";
+    signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgf6WXZLqBZ0pyIKEnzhKDXVB606z60jAid1FUylBqI";
     ignores = [
       ".vscode/"
       "builddir/"
@@ -271,6 +271,15 @@
           insteadOf = "https://github.com/";
         };
       };
+      gpg = {
+        format = "ssh";
+      };
+      "gpg \"ssh\"" = {
+        program = "/opt/1Password/op-ssh-sign";
+      };
+      commit = {
+        gpgsign = true;
+      };
     };
   };
 
@@ -282,7 +291,9 @@
     changeDirWidgetCommand = "fd --type d --hidden --follow --exclude .git";
   };
 
-  home.file = {};
+  home.file = {
+    "${config.xdg.dataHome}/fonts".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix-profile/share/fonts/opentype/NerdFonts";
+  };
 
   home.sessionVariables = {
     USING_NIX = "true";

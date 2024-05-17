@@ -35,8 +35,8 @@
     vim-full
     difftastic
     poetry
-    wasmer
-
+	wasmer
+	
     # Libs
     gcc
     devbox
