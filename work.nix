@@ -6,6 +6,7 @@
   # Set git config 
   programs.git = {
     userEmail = "yulian@unity3d.com";
+    signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgf6WXZLqBZ0pyIKEnzhKDXVB606z60jAid1FUylBqI";
   };
 
   programs.zsh = {

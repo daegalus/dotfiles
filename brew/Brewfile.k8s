@@ -1,0 +1,7 @@
+brew "helm"
+brew "helmsman"
+brew "k9s"
+brew "kubectx"
+brew "kubernetes-cli"
+brew "skaffold"
+brew "kompose"

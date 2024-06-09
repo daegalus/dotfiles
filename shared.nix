@@ -219,7 +219,7 @@
     enable = true;
     userName  = "Yulian Kuncheff";
     userEmail = lib.mkDefault "yulian@kuncheff.com";
-    signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgf6WXZLqBZ0pyIKEnzhKDXVB606z60jAid1FUylBqI";
+    signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFxHOEhEP2/1tCCaAgKK6KBOq8XZwA9k5XV0Dfgl3yNa";
     ignores = [
       ".vscode/"
       "builddir/"
@@ -292,7 +292,7 @@
   };
 
   home.file = {
-    "${config.xdg.dataHome}/fonts".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix-profile/share/fonts/opentype/NerdFonts";
+    #  "${config.xdg.dataHome}/fonts".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.nix-profile/share/fonts/opentype/NerdFonts";
   };
 
   home.sessionVariables = {

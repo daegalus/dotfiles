@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     # Fonts
-    (nerdfonts.override { fonts = [ "Hasklig" "CascadiaCode" "Monaspace" "DMMono"]; })
+    (nerdfonts.override { fonts = [ "Hasklig" "CascadiaCode" "Monaspace"]; })
 
     # Packages
     atuin
