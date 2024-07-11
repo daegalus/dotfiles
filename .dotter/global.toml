@@ -1,6 +1,13 @@
 
 [zsh.files]
 "files/zshrc" = "~/.zshrc"
+"files/zshenv" = "~/.zshenv"
+
+[ssh.files]
+"files/ssh/config" = "~/.ssh/config"
+
+[ssh.variables]
+hostname = "seashanty"
 
 [starship.files]
 "files/starship.toml" = "~/.config/starship.toml"
@@ -18,3 +25,7 @@
 [git.files]
 "files/git/config" = "~/.config/git/config"
 "files/git/ignore" = "~/.config/git/ignore"
+
+[git.variables]
+user_email = "yulian@kuncheff.com"
+

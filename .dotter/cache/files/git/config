@@ -4,7 +4,7 @@
 
 [core]
 	editor = "micro"
-	excludesFile = "{{home_path}}/.gitignore"
+	excludesFile = "/var/home/yulian/.gitignore"
 
 [diff]
 	external = "$HOMEBREW_PREFIX/bin/difft --color auto --background light --display side-by-side"

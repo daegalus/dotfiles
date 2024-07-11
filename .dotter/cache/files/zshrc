@@ -42,7 +42,7 @@ if [[ $options[zle] = on ]]; then
   eval "$HOMEBREW_PREFIX/bin/fzf --zsh)"
 fi
 
-NVM_DIR="{{home_path}}/.nvm"
+NVM_DIR="/var/home/yulian/.nvm"
 source $NVM_DIR/nvm.sh
 source $NVM_DIR/bash_completion
 
@@ -93,7 +93,7 @@ alias -- 'ppsc'='podman rm $(podman ps -a -q)'
 alias -- 'rake'='noglob rake'
 
 # Named Directory Hashes
-hash -d dl="{{home_path}}/Downloads"
-hash -d docs="{{home_path}}/Documents"
-hash -d hm="{{home_path}}/.config/home-manager"
-hash -d workspace="{{home_path}}/workspace"
+hash -d dl="/var/home/yulian/Downloads"
+hash -d docs="/var/home/yulian/Documents"
+hash -d hm="/var/home/yulian/.config/home-manager"
+hash -d workspace="/var/home/yulian/workspace"

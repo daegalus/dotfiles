@@ -3,6 +3,11 @@ packages = [
   "foot",
   "gh",
   "git",
+  "ssh",
   "starship",
   "zsh",
 ]
+
+[variables]
+signing_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFxHOEhEP2/1tCCaAgKK6KBOq8XZwA9k5XV0Dfgl3yNa"
+home_path = "/var/home/yulian"

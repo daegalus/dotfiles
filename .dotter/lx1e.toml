@@ -1,0 +1,15 @@
+packages = [
+  "atuin",
+  "foot",
+  "gh",
+  "git",
+  "ssh",
+  "starship",
+  "zsh",
+]
+
+[variables]
+user_email = "yulian@unity3d.com"
+signing_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgf6WXZLqBZ0pyIKEnzhKDXVB606z60jAid1FUylBqI"
+home_path = "/home/yulian"
+hostname = "lx1e"

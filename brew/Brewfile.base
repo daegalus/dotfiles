@@ -27,6 +27,5 @@ brew "xh"
 brew "zsh"
 brew "zplug"
 
-cask "font-caskaydia-cove-nerd-font"
-cask "font-hasklug-nerd-font"
-cask "font-dm-mono"
+brew "homebrew/linux-fonts/font-caskaydia-cove-nerd-font"
+brew "homebrew/linux-fonts/font-hasklug-nerd-font"
