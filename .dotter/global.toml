@@ -1,0 +1,20 @@
+
+[zsh.files]
+"files/zshrc" = "~/.zshrc"
+
+[starship.files]
+"files/starship.toml" = "~/.config/starship.toml"
+
+[atuin.files]
+"files/atuin.toml" = "~/.config/atuin/config.toml"
+
+[foot.files]
+"files/foot.ini" = "~/.config/foot/foot.ini"
+
+[gh.files]
+"files/gh/config.yml" = "~/.config/gh/config.yml"
+"files/gh/hosts.yml" = "~/.config/gh/hosts.yml"
+
+[git.files]
+"files/git/config" = "~/.config/git/config"
+"files/git/ignore" = "~/.config/git/ignore"

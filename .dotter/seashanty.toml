@@ -1,0 +1,8 @@
+packages = [
+  "atuin",
+  "foot",
+  "gh",
+  "git",
+  "starship",
+  "zsh",
+]

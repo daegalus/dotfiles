@@ -1,0 +1,29 @@
+paths = (
+  $FLYCTL_INSTALL/bin
+  /var/home/yulian/.bin
+  /var/home/yulian/.cargo/bin
+  /var/home/yulian/.local/bin
+  /var/home/yulian/.go/bin
+  /var/home/yulian/.poetry/bin
+  /var/home/yulian/.pyenv/bin
+  /var/home/yulian/.npm-packages/bin
+  $PATH
+)
+
+export CLICOLORS="1"
+export EDITOR="micro"
+export FLYCTL_INSTALL="/var/home/yulian/.fly"
+export FZF_ALT_C_COMMAND="fd --type d --hidden --follow --exclude .git"
+export FZF_CTRL_T_COMMAND="fd --type f --hidden --follow --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
+export GLAMOUR_STYLE="dark"
+export GOPATH="/var/home/yulian/.go"
+export GOPROXY="https://proxy.golang.org,direct"
+export LC_ALL="en_US.UTF-8"
+export LSOPTIONS="--color=always"
+export MICRO_TRUECOLOR="true"
+export NVM_DIR="/var/home/yulian/.nvm"
+export PATH="$FLYCTL_INSTALL/bin:/var/home/yulian/.bin:/var/home/yulian/.cargo/bin:/var/home/yulian/.local/share/ivm/bin/var/home/yulian/.local/bin:/var/home/yulian/.go/bin:/var/home/yulian/.poetry/bin:/var/home/yulian/.pyenv/bin:/var/home/yulian/.npm-packages/bin:$PATH"
+export TERM="xterm-256color"
+export USING_NIX="true"
+export WORKSPACE_ROOT="/var/home/yulian/workspace/code"
