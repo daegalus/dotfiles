@@ -29,3 +29,5 @@ hostname = "seashanty"
 [git.variables]
 user_email = "yulian@kuncheff.com"
 
+[1password.files]
+"files/1password-ssh-agent.toml" = "~/.config/1Password/ssh/agent.toml"

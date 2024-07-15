@@ -1,1 +1,3 @@
 *lock.json
+.dotter/cache
+.dotter/cache.toml
