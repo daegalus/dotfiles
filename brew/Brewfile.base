@@ -29,3 +29,4 @@ brew "zplug"
 
 brew "homebrew/linux-fonts/font-caskaydia-cove-nerd-font"
 brew "homebrew/linux-fonts/font-hasklug-nerd-font"
+brew "homebrew/linux-fonts/font-monaspace-nerd-font"
