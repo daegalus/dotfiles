@@ -1,7 +1,3 @@
-[commit]
-	gpgSign = false
-	gpgsign = true
-
 [core]
 	editor = "micro"
 	excludesFile = "{{home_path}}/.gitignore"
@@ -11,10 +7,12 @@
 
 [gpg]
 	format = "ssh"
-	program = "$HOMEBREW_PREFIX/bin/gpg2"
 
 [gpg "ssh"]
 	program = "/opt/1Password/op-ssh-sign"
+
+[commit]
+	gpgsign = true
 
 [init]
 	defaultBranch = "main"
@@ -35,10 +33,7 @@
 [tag]
 	gpgSign = false
 
-# [url "git@github.com:"]
-# 	insteadOf = "https://github.com/"
-
 [user]
 	email = "yulian@kuncheff.com"
 	name = "Yulian Kuncheff"
-	signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFxHOEhEP2/1tCCaAgKK6KBOq8XZwA9k5XV0Dfgl3yNa"
+	signingKey = "{{signing_key}}"
