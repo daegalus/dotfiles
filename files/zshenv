@@ -1,12 +1,12 @@
 path=(
   $FLYCTL_INSTALL/bin
-  /var/home/yulian/.bin
-  /var/home/yulian/.cargo/bin
-  /var/home/yulian/.local/bin
-  /var/home/yulian/.go/bin
-  /var/home/yulian/.poetry/bin
-  /var/home/yulian/.pyenv/bin
-  /var/home/yulian/.npm-packages/bin
+  $HOME/.bin
+  $HOME/.cargo/bin
+  $HOME/.local/bin
+  $HOME/.go/bin
+  $HOME/.poetry/bin
+  $HOME/.pyenv/bin
+  $HOME/.npm-packages/bin
   $path
 )
 

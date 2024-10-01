@@ -37,3 +37,6 @@
 	email = "yulian@kuncheff.com"
 	name = "Yulian Kuncheff"
 	signingKey = "{{signing_key}}"
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
