@@ -65,6 +65,10 @@ if [[ $options[zle] = on ]]; then
   eval "$($HOMEBREW_PREFIX/bin/atuin init zsh)"
 fi
 
+### Brew Python ###
+export PATH=$(brew --prefix python)/libexec/bin:$PATH
+
+
 ## Aliases ##
 alias -- 'bundle'='noglob bundle'
 alias -- 'code'='code --enable-features=UseOzonePlatform,WaylandWindowDecorations,WebRTCPipeWireCapturer --ozone-platform=wayland'
