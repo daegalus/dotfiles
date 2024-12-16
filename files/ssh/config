@@ -2,5 +2,8 @@ Host *
   IdentityAgent ~/.1password/agent.sock
 
 Host github.com
-  IdentityFile ~/.ssh/{{hostname}}.pub
+  IdentityFile ~/.ssh/{{ssh_key}}.pub
   IdentitiesOnly yes
+
+Host seashanty
+  Hostname 10.33.2.55

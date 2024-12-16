@@ -15,3 +15,4 @@ signing_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgf6WXZLqBZ0pyIKEnzhKDXVB606
 home_path = "/home/yulian"
 hostname = "yulian-lx1e"
 ssh_1password_vault = "Work"
+ssh_key = "work-lx1e"

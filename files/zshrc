@@ -105,3 +105,8 @@ hash -d dl="{{home_path}}/Downloads"
 hash -d docs="{{home_path}}/Documents"
 hash -d hm="{{home_path}}/.config/home-manager"
 hash -d workspace="{{home_path}}/workspace"
+
+## Ghostty
+if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
+    builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
+fi
