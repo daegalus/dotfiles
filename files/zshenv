@@ -1,6 +1,7 @@
 path=(
-  $FLYCTL_INSTALL/bin
   $HOME/.bin
+  $HOME/.nimble/bin
+  $FLYCTL_INSTALL/bin
   $HOME/.cargo/bin
   $HOME/.local/bin
   $HOME/.go/bin
