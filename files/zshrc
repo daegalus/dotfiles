@@ -53,6 +53,27 @@ dy() { drill -Q "$1" @dns.toys; }
 ### GCP GKE Creds shorthand
 gcpgke() { gcloud container clusters get-credentials --project $1 --region $2 $3; }
 
+install_sysext() {
+  SYSEXT="${1}"
+  URL="https://extensions.fcos.fr/extensions"
+  sudo install -d -m 0755 -o 0 -g 0 /etc/sysupdate.${SYSEXT}.d
+  sudo restorecon -RFv /etc/sysupdate.${SYSEXT}.d
+  curl --silent --fail --location "${URL}/${SYSEXT}.conf" \
+    | sudo tee "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.conf"
+  sudo /usr/lib/systemd/systemd-sysupdate update --component "${SYSEXT}"
+}
+
+merge_sysext() {
+  sudo systemctl restart systemd-sysext.service
+  systemd-sysext status
+}
+
+update_all_sysext() {
+  for c in $(/usr/lib/systemd/systemd-sysupdate components --json=short | jq --raw-output '.components[]'); do
+    sudo /usr/lib/systemd/systemd-sysupdate update --component "${c}"
+  done
+}
+
 ## Integraitons ##
 ### FZF Integration ###
 if [[ $options[zle] = on ]]; then

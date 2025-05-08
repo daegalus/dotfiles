@@ -29,8 +29,9 @@ export USING_NIX="true"
 export WORKSPACE_ROOT="{{home_path}}/workspace/code"
 export HOMEBREW_NO_ENV_HINTS="1"
 export QT_QPA_PLATFORM="" # To make Vivaldi work.
+export SSH_AUTH_SOCK=~/.1password/agent.sock
 
-if [[ $HOSTNAME == "lx1e"* ]]; then
+if [[ $HOSTNAME == "dp7680"* ]]; then
     export USE_GKE_GCLOUD_AUTH_PLUGIN="true";
     export WASMER_DIR="{{home_path}}/.wasmer";
 fi
