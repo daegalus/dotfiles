@@ -4,6 +4,7 @@ path=(
   $FLYCTL_INSTALL/bin
   $HOME/.cargo/bin
   $HOME/.local/bin
+  /home/linuxbrew/.linuxbrew/bin
   $HOME/.go/bin
   $HOME/.poetry/bin
   $HOME/.pyenv/bin

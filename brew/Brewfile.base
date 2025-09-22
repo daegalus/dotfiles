@@ -1,3 +1,6 @@
+tap ublue-os/homebrew-tap
+tap daegalus/homebrew-tap
+
 brew "atuin"
 brew "age"
 brew "bat"
@@ -31,4 +34,7 @@ brew "zplug"
 
 cask "font-caskaydia-cove-nerd-font"
 cask "font-hasklug-nerd-font"
-cask "font-monaspace-nerd-font"
+cask "font-monaspice-nerd-font"
+cask visual-studio-code-linux
+cask 1password-cli
+cask 1password-gui-linux

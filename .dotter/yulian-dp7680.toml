@@ -11,7 +11,7 @@ packages = [
 
 [variables]
 user_email = "yulian@unity3d.com"
-signing_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFgf6WXZLqBZ0pyIKEnzhKDXVB606z60jAid1FUylBqI"
+signing_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFNxxHTLK5zifEU0zVVPVqfxZYadRj79QPqEjWbXHKD4"
 home_path = "/home/yulian"
 hostname = "yulian-dp7680"
 ssh_1password_vault = "Work"

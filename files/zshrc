@@ -5,11 +5,11 @@ HELPDIR="$HOMEBREW_PREFIX/share/zsh/help"
 
 ## Brew Fixes
 # Brew Services Symlink
-if [ ! -e '/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew_services' ]; then 
-    cd /home/linuxbrew/.linuxbrew/share/zsh/site-functions/
-	rm _brew_services && ln -s ../../../Homebrew/Library/Taps/homebrew/homebrew-services/completions/zsh/_brew_services _brew_services
-	cd -
-fi
+# if [ ! -e '/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew_services' ]; then 
+#     cd /home/linuxbrew/.linuxbrew/share/zsh/site-functions/
+# 	rm _brew_services && ln -s ../../../Homebrew/Library/Taps/homebrew/homebrew-services/completions/zsh/_brew_services _brew_services
+# 	cd -
+# fi
 
 ## Load Brew Early ##
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -53,28 +53,7 @@ dy() { drill -Q "$1" @dns.toys; }
 ### GCP GKE Creds shorthand
 gcpgke() { gcloud container clusters get-credentials --project $1 --region $2 $3; }
 
-install_sysext() {
-  SYSEXT="${1}"
-  URL="https://extensions.fcos.fr/extensions"
-  sudo install -d -m 0755 -o 0 -g 0 /etc/sysupdate.${SYSEXT}.d
-  sudo restorecon -RFv /etc/sysupdate.${SYSEXT}.d
-  curl --silent --fail --location "${URL}/${SYSEXT}.conf" \
-    | sudo tee "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.conf"
-  sudo /usr/lib/systemd/systemd-sysupdate update --component "${SYSEXT}"
-}
-
-merge_sysext() {
-  sudo systemctl restart systemd-sysext.service
-  systemd-sysext status
-}
-
-update_all_sysext() {
-  for c in $(/usr/lib/systemd/systemd-sysupdate components --json=short | jq --raw-output '.components[]'); do
-    sudo /usr/lib/systemd/systemd-sysupdate update --component "${c}"
-  done
-}
-
-## Integraitons ##
+## Integrations ##
 ### FZF Integration ###
 if [[ $options[zle] = on ]]; then
   eval "$($HOMEBREW_PREFIX/bin/fzf --zsh)"
