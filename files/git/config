@@ -3,13 +3,13 @@
 	excludesFile = "{{home_path}}/.gitignore"
 
 [diff]
-	external = "/home/linuxbrew/.linuxbrew/bin/difft --color auto --background light --display side-by-side"
+	external = "$HOMEBREW_PREFIX/bin/difft --color auto --background light --display side-by-side"
 
 [gpg]
 	format = "ssh"
 
 [gpg "ssh"]
-	program = "/home/linuxbrew/.linuxbrew/bin/op-ssh-sign"
+	program = "$HOMEBREW_PREFIX/bin/op-ssh-sign"
 
 [commit]
 	gpgsign = true
@@ -40,3 +40,6 @@
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
+
+[color]
+	ui = auto
