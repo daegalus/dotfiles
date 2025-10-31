@@ -3,14 +3,6 @@ typeset -U path cdpath fpath manpath
 fpath+=($HOMEBREW_PREFIX/share/zsh/site-functions $HOMEBREW_PREFIX/share/zsh/functions)
 HELPDIR="$HOMEBREW_PREFIX/share/zsh/help"
 
-## Brew Fixes
-# Brew Services Symlink
-# if [ ! -e '/home/linuxbrew/.linuxbrew/share/zsh/site-functions/_brew_services' ]; then 
-#     cd /home/linuxbrew/.linuxbrew/share/zsh/site-functions/
-# 	rm _brew_services && ln -s ../../../Homebrew/Library/Taps/homebrew/homebrew-services/completions/zsh/_brew_services _brew_services
-# 	cd -
-# fi
-
 ## Load Brew Early ##
 test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
@@ -74,6 +66,9 @@ fi
 
 ### Brew Python ###
 export PATH=$(brew --prefix python)/libexec/bin:$PATH
+
+### Brew Ruby Gems ###
+export PATH=$(gem env home)/bin:$PATH
 
 
 ## Aliases ##
