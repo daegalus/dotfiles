@@ -9,6 +9,8 @@ path=(
   $HOME/.poetry/bin
   $HOME/.pyenv/bin
   $HOME/.npm-packages/bin
+  $HOME/.local/share/swiftly/bin
+  $path
 )
 
 export CLICOLORS="1"
