@@ -1,0 +1,18 @@
+packages = [
+  "1password",
+  "atuin",
+  "foot",
+  "gh",
+  "git",
+  "ssh",
+  "starship",
+  "zsh",
+]
+
+[variables]
+user_email = "yulian@normalcomputing.com"
+signing_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAtHebexLZHo7C5WVTPvex/QhFrGDbhJzviXVrROfQdS"
+home_path = "/var/home/yulian"
+hostname = "yulian-normal"
+ssh_1password_vault = "Work"
+ssh_key = "yulian-normal"
