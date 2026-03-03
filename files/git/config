@@ -34,7 +34,7 @@
 	gpgSign = false
 
 [user]
-	email = "yulian@kuncheff.com"
+	email = "{{user_email}}"
 	name = "Yulian Kuncheff"
 	signingKey = "{{signing_key}}"
 
